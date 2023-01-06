@@ -39,7 +39,7 @@ async function getStreams(username) {
 
 function checkLIVE(data, username) {
     var { data: streams } = data;
-    if (streams.length == 1)
+    if (streams.length == 0)
          {
          document.getElementById(username).classList.remove("hidden");
          }
