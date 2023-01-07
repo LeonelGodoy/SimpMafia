@@ -5,6 +5,7 @@
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="SemiColonWeb" />
+
 	<!-- Stylesheets
 	============================================= -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap" rel="stylesheet" type="text/css" />
@@ -35,6 +36,56 @@
 
 	<!-- Document Wrapper
 	============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header"
+				 style="background: #050505  100% 0 no-repeat; background-size: 60%">
+
+			<div class="slider-inner">
+				<div class="vertical-middle">
+					<div class="container py-5">
+						<div class="row align-items-center col-mb-50">
+							<div class="col-md-6 dark">
+								<div class="py-5 py-md-0">
+									<small class="text-muted text-uppercase fw-light ls4 mb-1 d-block">Welcome to</small>
+									<h2>Simp Mafia</h2>
+									<h5 class="fw-light ls1 " style="opacity: .7; margin-left: 200px"> A state of mind, after smoking weed every day.</h5>
+									<div class="d-flex align-items-center mt-5" >
+										<a href="#" class="button button-change button-rounded overflow-hidden nott button-large fw-normal mx-0 px-5" >
+											<span>Join our Discord <i class="fa-brands fa-discord " aria-hidden="true" ></i></span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 ps-md-5 ps-lg-0">
+								<div class="row align-items-stretch">
+									<div class="col-lg-6 col-md-12 rounded col-6" style="background-size: cover">
+									</div>
+									<div class="col-6 d-none d-lg-flex"></div>
+									<div class="col-6 d-none d-lg-flex"></div>
+								</div>
+
+								<div class="simp">
+									<img src="{{ url_for('static', filename='images/Simp Mafia.png') }}">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="video-wrap">
+					<video preload="auto" loop autoplay muted>
+						<source src='{{ url_for('static', filename='images/SMOKEWEEDEVERYDAY.mp4') }}' type='video/mp4' />
+					</video>
+					<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+				</div>
+			</div>
+
+		</section><!-- #Slider End -->
 
 		<!-- Content
 		============================================= -->
@@ -304,6 +355,37 @@
 								</div>
 							</div>
 
+                            <div class="oc-item">
+								<div class="portfolio-item">
+									<div class="portfolio-image">
+										<a>
+											<img src="{{ url_for('static', filename='images/Keo.png') }}" >
+										</a>
+										<div class="bg-overlay">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3>Simp Mafia CTO</h3>
+										<span> Keo </span>
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
 						</div><!-- .portfolio-carousel end -->
 
 					</div>
@@ -313,9 +395,29 @@
 
 		</section><!-- #content end -->
 
+        <!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark border-0 clearfix">
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" style="background: #222">
+				<div class="container clearfix">
+
+					<div class="w-100 text-center">
+						<div class="social-media">
+							  <a href="https://discordapp.com/users/192029293436469248" target="_blank">
+								  <i class="fa-brands fa-discord social-media " aria-hidden="true" ></i></a>
+						  </div>
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+    </div>
+
+
     <script type="text/javascript">
-            const MY_SECRET_SAUCE = '{{ keys.MY_SECRET_SAUCE }}';
-            const MY_SECRET_ID = '{{ keys.MY_SECRET_ID}}';
+            const parsed = JSON.parse('[{{dicts | tojson}}]');
         </script>
     <!-- JavaScripts
 	============================================= -->
