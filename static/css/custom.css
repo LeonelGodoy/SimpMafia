@@ -5,4 +5,231 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
+div.simp {
+    transform:
+      perspective(800px)
+      rotateY(-15deg)
+      translateY(-50px)
+      rotateX(10deg)
+      scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+.social-media {
+  font-size: 35px;
+  color: pink;
+}
+
+.social-media:hover {
+    color: red;
+    background-color: transparent;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: red;
+    box-shadow: 0 0 3px red;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0 0 10px red;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0 0 3px red;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #A8052B;
+    box-shadow: 0 0 3px #A8052B;
+  }
+  50% {
+    background-color: #E81949;
+    box-shadow: 0 0 10px #E81949;
+  }
+  100% {
+    background-color: #A8052B;
+    box-shadow: 0 0 3px #A8052B;
+  }
+}
+
+.btn{
+  display: block;
+  font-weight: 700;
+  position: relative;
+  padding: 2px 0px;
+  background-color: rgba($white,.9);
+  text-decoration: none;
+  background-color: red;
+  width: 50px;
+  color: #333;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 0px 2px 0px darken($bodyBgc,10%);
+  transition: all .2s;
+  z-index: 1;
+  outline: none;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  &:hover{
+    transform: translateY(-5px)
+      // scale(1.05,1.05)
+    ;
+    padding: calc(13px * #{$btnPaddingScalePlus}) calc(25px * #{$btnPaddingScalePlus});
+    padding-right: calc(22px * $btnPaddingScalePlus);
+    background-color: rgba(#fff,1);
+    border: none;
+    box-shadow: 0px 5px 10px darken($bodyBgc,7%);
+  }
+  &:hover > span:before{
+    animation: none;
+  }
+  &:active{
+      transform: translateY(0px)
+      // scale(.95,.95)
+      ;
+    padding: calc(13px * #{$btnPaddingScaleMinus}) calc(25px * #{$btnPaddingScaleMinus});
+      box-shadow: inset 0px 2px 1px darken($bodyBgc,10%);
+  }
+}
+
+
+.btn_live{
+  padding-right: 1px;
+  color: White;
+  animation: glowing 2s ease-in-out infinite;
+  z-index: 1000;
+
+}
+
+.live-icon{
+    display: inline-block;
+    position: relative;
+    top: calc(50% - 5px);
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    margin-left: 20px;
+    border: 1px solid rgba(black, .1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: glowing 2s ease-in-out infinite;
+
+  }
+@keyframes live {
+  0% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(3.5,3.5);
+    background-color: rgba(red,0);
+  }
+}
+
+
+.hidden {
+    visibility: hidden;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+
+/* .button-reveal */
+.button.button-reveal i {
+	opacity: 0;
+	left: auto !important;
+	right: 20px !important;
+	background-color: transparent;
+	transition: all .3s ease !important;
+}
+
+.button.text-end.button-reveal i {
+	left: 20px !important;
+	right: auto !important;
+}
+
+.button:not(.text-end).button-reveal i {
+	left: auto !important;
+	right: 20px !important;
+}
+
+.button:hover.button-reveal i {
+	opacity: 1;
+	right: 0 !important;
+	transform: translateX(-10px);
+}
+
+.button.button-reveal:not(.text-end):hover span { left: -9% !important; }
+
+.button.button-reveal.text-end:hover span { left: 9% !important; }
+
+
+
+.overlay-trigger-icon:hover i:first-child { margin-top: -38px; }
+
+.overlay-trigger-icon.si-large:hover i:first-child { margin-top: -54px; }
+
+.overlay-trigger-icon.si-small:hover i:first-child { margin-top: -30px; }
+
+.overlay-trigger-icon:hover {
+	color: #555;
+	border-color: transparent;
+}
+
+
+/* ----------------------------------------------------------------
+	Social Icons
+-----------------------------------------------------------------*/
+.overlay-trigger-icon {
+  /*margin: 25px 5px 5px 0;*/
+  /*width: 40px;*/
+  /*height: 40px;*/
+  /*font-size: 1.25rem;*/
+  /*line-height: 38px !important;*/
+  /*color: #555555;*/
+  /*text-shadow: none;*/
+  /*border: 1px solid #aaaaaa;*/
+  /*border-radius: 3px;*/
+  overflow: hidden;
+  /* Social Icons - Large
+  -----------------------------------------------------------------*/
+  /* Social Icons - Small
+  -----------------------------------------------------------------*/
+  /* Social Icons - Hover
+  	-----------------------------------------------------------------*/
+}
+.d-flex > .social-icon, .d-sm-flex > .social-icon, .d-md-flex > .social-icon, .d-lg-flex > .social-icon, .d-xl-flex > .social-icon {
+  float: none;
+}
+.overlay-trigger-icon i {
+    display: block;
+    position: relative;
+    top: 10px;
+    padding-bottom: 20px;
+}
+body:not(.device-touch) .overlay-trigger-icon i {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.overlay-trigger-icon:hover i:first-child {
+    margin-top: -38px;
+}
+
+
+.overlay-trigger-icon:hover {
+    border-color: transparent;
+    color: white;
+}
+.overlay-trigger-icon.si-colored {
+  border-color: transparent;
+}
+
+
+
+.si-twitch:hover { background-color: #6441a5 !important; }
 

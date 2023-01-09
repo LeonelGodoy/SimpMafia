@@ -4,7 +4,6 @@ import requests
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def main():  # put application's code here
     client_id = os.environ['MY_SECRET_SAUCE']
