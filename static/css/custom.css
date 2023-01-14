@@ -14,16 +14,42 @@ div.simp {
       scale(1);
     filter: blur(0);
     opacity: 1;
+    transition: transform .5s; /* Animation */
+
+
   }
+
+.simp:hover {
+     transform:
+      perspective(800px)
+      rotateY(-15deg)
+      translateY(-50px)
+      rotateX(10deg)
+      scale(1.1);
+    filter: blur(0);
+    opacity: 1;
+}
+
+#blurred {
+  position: absolute;
+  z-index: 0;
+  filter: blur(100px);
+}
+#cover {
+  z-index: 1;
+  position: relative;
+}
 
 .social-media {
   font-size: 35px;
   color: pink;
+
 }
 
 .social-media:hover {
     color: red;
     background-color: transparent;
+
 }
 
 @keyframes glowing {
@@ -232,4 +258,15 @@ body:not(.device-touch) .overlay-trigger-icon i {
 
 
 .si-twitch:hover { background-color: #6441a5 !important; }
+
+.si-discord:hover { background-color: #5865F2 !important; }
+
+.icon-angle-up:before {
+	content: "\e7a6";
+}
+
+
+.icon-angle-up1:before {
+	content: "\e914";
+}
 

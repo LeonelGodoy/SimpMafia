@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/dark.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" type="text/css" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Photographer Specific Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/photographer.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}" type="text/css" />
 
 	<!-- Photographer Specific Color -->
 	<script src="https://kit.fontawesome.com/4563755126.js" crossorigin="anonymous"></script>
@@ -48,16 +50,17 @@
 					<div class="container py-5">
 						<div class="row align-items-center col-mb-50">
 							<div class="col-md-6 dark">
-								<div class="py-5 py-md-0">
+								<div class="py-5 py-md-0" data-animate="bounceInLeft">
 									<small class="text-muted text-uppercase fw-light ls4 mb-1 d-block">Welcome to</small>
 									<h2>Simp Mafia</h2>
 									<h5 class="fw-light ls1 " style="opacity: .7; margin-left: 200px"> A state of mind, after smoking weed every day.</h5>
 									<div class="d-flex align-items-center mt-5" >
-                                        <a href="#" class="button button-xlarge button-circle button-reveal nott ls0 text-end ">
+                                        <a href="https://discord.gg/Fx7vd85g" target="_blank" class="button button-xlarge button-circle button-reveal nott ls0 text-end ">
                                             <i class="fa-brands fa-discord " aria-hidden="true" >
                                             </i>
                                             <span>Join our Discord</span>
                                         </a>
+
 									</div>
 								</div>
 							</div>
@@ -71,8 +74,11 @@
 								</div>
 
 								<div class="simp">
-									<img src="{{ url_for('static', filename='images/Simp Mafia.png') }}">
+									<img id="blurred" src="{{ url_for('static', filename='images/Simp Mafia.png') }}">
+                                    <img id="cover"  src="{{ url_for('static', filename='images/Simp Mafia.png') }}"
+                                         onclick="playAudio('\\static\\music\\SMOKE WEED EVERYDAY TRIM.mp3')">
 								</div>
+
 							</div>
 
 						</div>
@@ -188,7 +194,7 @@
 										</div>
 									</div>
 									<div class="portfolio-desc">
-										<h3>Simp Mafia Clown</h3>
+										<h3>Simp Mafia Right Hand</h3>
 										<span> GamerPoOL </span>
 									</div>
 								</div>
@@ -403,68 +409,132 @@
 								</div>
 							</div>
 
+                            <div class="oc-item">
+								<div class="portfolio-item">
+									<div class="portfolio-image">
+										<a>
+											<img src="{{ url_for('static', filename='images/HighKing.jpg') }}" >
+										</a>
+										<div class="bg-overlay">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+                                                <a href="https://www.youtube.com/@laserpit2958" target="_blank" rel="noopener noreferrer"
+												   class="overlay-trigger-icon bg-light text-dark si-youtube" data-hover-animate="fadeInDownSmall"
+												   data-hover-animate-out="fadeInUpSmall" data-hover-speed="350" data-lightbox="link">
+													<i class="fa-brands fa-youtube"></i>
+                                                    <i class="fa-brands fa-youtube text-white"></i>
+                                                </a>
+
+                                                <a href="https://www.tiktok.com/@laserpet" target="_blank" rel="noopener noreferrer"
+												   class="overlay-trigger-icon bg-light text-dark si-tiktok" data-hover-animate="fadeInDownSmall"
+												   data-hover-animate-out="fadeInUpSmall" data-hover-speed="350" data-lightbox="link">
+													<i class="fa-brands fa-tiktok"></i>
+                                                    <i class="fa-brands fa-tiktok text-white"></i>
+                                                </a>
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3>Simp Mafia Intelligence</h3>
+										<span> High King Cobrah </span>
+									</div>
+								</div>
+							</div>
+
+                            <div class="oc-item">
+								<div class="portfolio-item">
+									<div class="portfolio-image">
+										<a>
+											<img src="{{ url_for('static', filename='images/Simp Mafia Dayvo.jpg') }}" >
+										</a>
+										<div class="bg-overlay">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+                                                <a href="https://discordapp.com/users/476533246533042189/" target="_blank" rel="noopener noreferrer"
+												   class="overlay-trigger-icon bg-light text-dark si-discord" data-hover-animate="fadeInDownSmall"
+												   data-hover-animate-out="fadeInUpSmall" data-hover-speed="350" data-lightbox="link">
+													<i class="fa-brands fa-discord"></i>
+                                                    <i class="fa-brands fa-discord text-white"></i>
+                                                </a>
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3>Simp Mafia Dayvo</h3>
+										<span> Simp Mafia Dayvo </span>
+									</div>
+								</div>
+							</div>
+
 						</div><!-- .portfolio-carousel end -->
 
-					</div>
+
+					<!-- Grid row -->
+                        <div class="card-columns" data-lightbox="gallery">
+                            <a href="{{ url_for('static', filename='images/Lemon.jpg') }}" data-lightbox="gallery-item">
+                                <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/Lemon.jpg') }}" alt="Image">
+                            </a>
+
+                            <blockquote class="twitter-tweet"  data-theme="dark"><p lang="en" dir="ltr">
+                                <a href="https://twitter.com/cat_falco/status/{{ tweet1 }}?ref_src=twsrc%5Etfw"></a>
+                            </blockquote>
+
+                             <a href="{{ url_for('static', filename='images/IMG_1214.jpg') }}" data-lightbox="gallery-item">
+                                <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/IMG_1214_s.jpg') }}" alt="Image">
+                            </a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <blockquote class="twitter-tweet"  data-theme="dark"><p lang="en" dir="ltr">
+                                <a href="https://twitter.com/cat_falco/status/{{ tweet2 }}?ref_src=twsrc%5Etfw"></a>
+                            </blockquote>
+                            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">
+                                <a href="https://twitter.com/cat_falco/status/{{ tweet3 }}?ref_src=twsrc%5Etfw"></a>
+                            </blockquote>
+
+                            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/100674954&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+
+                            </iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;
+                                word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+                                 font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/jahari_based" title="jahari_based" target="_blank" style="color: #cccccc;
+                                     text-decoration: none;">jahari_based</a> ·
+                                    <a href="https://soundcloud.com/jahari_based/love-problems-1"
+                                       title="Lil B - Love Problems" target="_blank" style="color: #cccccc; text-decoration: none;">Lil B - Love Problems</a>
+                                </div>
+                                <a href="{{ url_for('static', filename='images/Leyo_the_Professional_SimpMafiaRiseUp.jpg') }}" data-lightbox="gallery-item">
+                                    <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/Leyo_the_Professional_SimpMafiaRiseUp.jpg') }}" alt="Image">
+                                </a>
+
+                            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">
+                                <a href="https://twitter.com/cat_falco/status/{{ tweet4 }}?ref_src=twsrc%5Etfw"></a>
+                            </blockquote>
+                            <a href="https://streamlabs.com/cm_nyc_tv/merch" target="_blank" >
+                                <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/MERCH.jpg') }}" alt="Image">
+                            </a>
+                            <a href="{{ url_for('static', filename='images/IMG_1201.png') }}" data-lightbox="gallery-item">
+                                <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/IMG_1201_s.png') }}" alt="Image">
+                            </a>
+                            <a href="{{ url_for('static', filename='images/Jennie.png') }}" data-lightbox="gallery-item">
+                                <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/Jennie.png') }}" alt="Image">
+                            </a>
+                            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">
+                                <a href="https://twitter.com/cat_falco/status/{{ tweet5 }}?ref_src=twsrc%5Etfw"></a>
+                            </blockquote>
+                            <video preload="auto" loop autoplay muted >
+                                <source src='{{ url_for('static', filename='images/bridget_taunt.mov') }}' type='video/mp4' style="display:inline"/>
+                            </video>
+                            <a href="{{ url_for('static', filename='images/MATT DANCE.gif') }}" data-lightbox="gallery-item">
+                                <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/MATT DANCE.gif') }}" alt="Image">
+                            </a>
+
+
+
+                        </div>
+                    </div>
 				</div>
 			</div>
 
 		</section><!-- #content end -->
-
-        <!-- Content
-		============================================= -->
-		<section id="content">
-			<div class="content-wrap">
-				<div class="container clearfix">
-
-					<div class="row justify-content-center mb-5">
-						<div class="col-xl-6 col-lg-8 text-center">
-							<h3 class="h1 fw-bold mb-3">Gallery</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quibusdam temporibus doloremque sunt consequatur nemo.</p>
-						</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<!-- Grid row -->
-					<div class="card-columns" data-lightbox="gallery">
-
-						<a href="{{ url_for('static', filename='images/IMG_4398.jpg') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/IMG_4398.jpg') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-                        <a href="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" data-lightbox="gallery-item">
-							<img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/CM_NYC_TV.png') }}" alt="Image">
-						</a>
-
-
-					</div>
-					<!-- Grid row -->
-
-				</div>
-			</div>
-		</section><!-- #content end -->
-
 
 
 
@@ -477,11 +547,8 @@
 			<div id="copyrights" style="background: #222">
 				<div class="container clearfix">
 
-					<div class="w-100 text-center">
-						<div class="social-media">
-							  <a href="https://discordapp.com/users/192029293436469248" target="_blank">
-								  <i class="fa-brands fa-discord social-media" aria-hidden="true" ></i></a>
-						  </div>
+					<div class="w-100 text-center" style="text-align: left">
+						Simp Mafia
 					</div>
 
 				</div>
@@ -490,11 +557,13 @@
     </div>
 
 
-    <script type="text/javascript">
-            const parsed = JSON.parse('[{{dicts | tojson}}]');
-        </script>
+
+
     <!-- JavaScripts
 	============================================= -->
+    <script type="text/javascript">
+        const parsed = JSON.parse('[{{dicts | tojson}}]');
+    </script>
 	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/plugins.min.js') }}"></script>
 

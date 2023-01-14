@@ -16,3 +16,27 @@ Object.keys(parsed[0]).forEach(function(key) {
          }
 
 })}, 1000);
+
+function playAudio(url) {
+    new Audio(url).play();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

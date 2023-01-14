@@ -4,8 +4,14 @@ import requests
 
 app = Flask(__name__)
 
+import tweepy
+
+
+
 @app.route('/')
 def main():  # put application's code here
+    bearer_token = os.environ['MY_BEARER_TOKEN']
+
     client_id = os.environ['MY_SECRET_SAUCE']
     client_secret = os.environ['MY_SECRET_ID']
     headers = {
@@ -23,7 +29,18 @@ def main():  # put application's code here
         # data output
         dicts[streamer] = len(response['data'])
 
-    return render_template("index.html", dicts=dicts)
+    client = tweepy.Client(bearer_token=bearer_token)
+    cm_tweet = client.get_users_tweets(id='930662549812600832')
+    tweet1 = cm_tweet[0][0].id
+    tweet2 = cm_tweet[0][1].id
+    tweet3 = cm_tweet[0][2].id
+    lilb_tweet = client.get_users_tweets(id='37836873')
+    tweet4 = lilb_tweet[0][0].id
+    jennie_tweet = client.get_users_tweets(id='3243685400')
+    tweet5 = jennie_tweet[0][0].id
+
+    return render_template("index.html", dicts=dicts,
+                           tweet1=tweet1, tweet2=tweet2, tweet3=tweet3, tweet4=tweet4, tweet5=tweet5)
 
 
 if __name__ == '__main__':
