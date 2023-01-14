@@ -54,7 +54,7 @@
 					<div class="container py-5">
 						<div class="row align-items-center col-mb-50">
 							<div class="col-md-6 dark">
-								<div class="py-5 py-md-0" data-animate="bounceInLeft">
+								<div class="py-5 py-md-0">
 									<small class="text-muted text-uppercase fw-light ls4 mb-1 d-block">Welcome to</small>
 									<h2>Simp Mafia</h2>
 									<h5 class="fw-light ls1 " style="opacity: .7; margin-left: 200px"> A state of mind, after smoking weed every day.</h5>
@@ -524,9 +524,11 @@
                             <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">
                                 <a href="https://twitter.com/cat_falco/status/{{ tweet5 }}?ref_src=twsrc%5Etfw"></a>
                             </blockquote>
-                            <video preload="auto" loop autoplay muted >
-                                <source src='{{ url_for('static', filename='images/bridget_taunt.mov') }}' type='video/mp4' style="display:inline"/>
-                            </video>
+                            <a>
+                                <video width="100%" height="100%" preload="auto" loop autoplay muted >
+                                    <source src='{{ url_for('static', filename='images/bridget_taunt.mov') }}' type='video/mp4' style="display:inline"/>
+                                </video>
+                            </a>
                             <a href="{{ url_for('static', filename='images/MATT DANCE.gif') }}" data-lightbox="gallery-item">
                                 <img class="img-fluid mb-4 h-op-09 op-ts" src="{{ url_for('static', filename='images/MATT DANCE.gif') }}" alt="Image">
                             </a>
