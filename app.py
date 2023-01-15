@@ -20,7 +20,8 @@ def main():  # put application's code here
         "grant_type": 'client_credentials',
         'Authorization': 'Bearer ' + os.environ['MY_SECRET_TOKEN']
     }
-    streamers = ['cm_nyc_tv', 'gamerpool474_ph', 'snoozefighting', 'scentless__apprentice', 'mattnguyen', 'leyopan']
+    streamers = ['cm_nyc_tv', 'gamerpool474_ph', 'snoozefighting', 'scentless__apprentice',
+                 'mattnguyen', 'leyopan', 'camelul', 'replaisment']
     dicts = {}
     for streamer in streamers:
         url = "https://api.twitch.tv/helix/streams?user_login=" + streamer
